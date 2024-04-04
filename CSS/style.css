@@ -1,0 +1,223 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* navbar editing*/
+.navContent
+{
+    background-color: rgb(66, 84, 46);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.25em 1.25em; 
+}
+
+.navbar
+{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* logo editing*/
+#logo
+{
+    height: 3.5em;
+    width: 4em;
+}
+
+/* nav buttons editing*/
+.navbar-buttons 
+{
+    display: flex;
+    gap: 0.625em;
+}
+
+.login-button
+{
+    margin-right: 2vw;
+}
+
+.login-button, .register-button 
+{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 0.3125em;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.login-button:hover, .register-button:hover 
+{
+    background-color: #333;
+}
+
+.separator
+{
+    height: 0.4em;
+    background-color: #816300;
+}
+/* carousel editing */
+
+.libraryScroll
+{
+    position: relative;
+    
+}
+
+.slick-carousel img
+{
+    max-width: 100%;
+    height: 50vw;
+}
+
+.grey-box
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
+
+/* main buttons editing */
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.bookButton {
+    width: 50vw;
+    height: 15vw;
+    background: #cdcbcb;
+    color: rgb(78, 78, 78);
+    text-align: center;
+    line-height: 14vw;
+    font-size: 1.8vw;
+    transition: transform 0.5s;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3em;
+}
+
+.bookButton:hover {
+    transform: scale(1.1);
+}
+
+/* footer editing */
+footer
+{
+    background-color: rgb(66, 84, 46);
+    margin: 0;
+    padding: 10em;
+}
+
+#footerNote
+{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+@media (max-width: 1300px)
+{
+    .bookButton 
+    {
+        width: 50vw;
+        height: 20vw;
+        background: #cdcbcb;
+        color: rgb(78, 78, 78);
+        text-align: center;
+        line-height: 18vw;
+        font-size: 4vw;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+}
+@media (max-width: 768px) 
+{
+    .navContent
+    {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .navContent-buttons 
+    {
+        margin-top: 0.625em;
+    }
+
+    .login-button, .register-button 
+    {
+        font-size: 01em;
+    }
+
+    .libraryScroll
+    {
+        position: relative;
+    }
+
+    .slick-carousel img
+    {
+        height: 120vw;
+    }
+
+
+    .main-content
+    {
+        flex-direction: column;
+  
+    }
+
+    #searchBook
+    {
+        margin: 5vw;
+    }
+
+    #reserveBook
+    {
+        margin: 1vw;
+    }
+
+    .bookButton 
+    {
+        width: 50vw;
+        height: 30vw;
+        background: #cdcbcb;
+        color: rgb(78, 78, 78);
+        text-align: center;
+        line-height: 25vw;
+        font-size: 5vw;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+
+    footer
+    {
+        padding: 7em;
+    }
+
+    #footerNote
+    {
+        font-size: 1.5em;
+    }
+}

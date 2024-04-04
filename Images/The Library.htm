@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="The%20Library_files/style.css">
+    <link rel="icon" href="http://localhost/webd/Project/Images/book-icon.png" type="image/icon type">
+    <script src="The%20Library_files/RegisterValidation.js"></script><script src="The%20Library_files/page-script.js"></script>
+    <title>The Library</title>
+</head>
+<body>
+    <h1>Library Registration</h1>
+    <h2>Please enter your full details below</h2>
+        <form method="post" onsubmit="return registerValidation();" data-bitwarden-watching="1">
+        <p style="color:red;">* Required fields</p>
+        <br><br>
+
+        Username: <input type="text" name="username">
+        <span class="error" id="usernameError">*Username is required</span>
+        <br><br>
+
+        Password: <input type="password" name="password" value="">
+        <span class="error" id="passwordError">*Password is required</span>
+        <br><br>
+
+        Re-Enter Password: <input type="password" name="rePassword" value="">
+        <span class="error" id="rePasswordError">*Please re-enter your password</span>
+        <br><br>
+
+        First Name: <input type="text" name="fname">
+        <span class="error" id="fnameError">Please enter your first name.</span>
+        <br><br>
+
+        Last Name: <input type="text" name="lname">
+        <span class="error" id="lnameError">*Please enter your last name</span>
+        <br><br>
+
+        Address 1: <input type="text" name="ad1">
+        <span class="error" id="ad1Error">*Please enter the first line of your address</span>
+        <br><br>
+
+        Address 2: <input type="text" name="ad2">
+        <span class="error" id="ad2Error">*Please enter the second line of your address</span>
+        <br><br>
+
+        City: <input type="text" name="city">
+        <span class="error" id="cityError">*Please enter the city you live in</span>
+        <br><br>
+
+        Telephone: <input type="tel" name="tel">
+        <span class="error" id="telError">*Please enter your telephone number</span>
+        <br><br>
+
+        Mobile: <input type="tel" name="mob">
+        <span class="error" id="mobError">*Please enter your mobile number</span>
+        <br><br>
+        <input type="submit" value="Enter" data-bitwarden-clicked="1">
+    </form>
+    
+</body></html>
