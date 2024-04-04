@@ -1,5 +1,7 @@
 DROP TABLE IF EXISTS `reservations`, `books`, `categories`, `users`;
-
+DROP USER IF EXISTS'alanjmckenna'@'localhost';
+DROP USER IF EXISTS 'joecrotty'@'localhost';
+DROP USER IF EXISTS 'tommy100'@'localhost';
 
 CREATE TABLE `users` 
 (
@@ -10,8 +12,8 @@ CREATE TABLE `users`
     AddressLine1 varchar(30), 
     AddressLine2 varchar(30), 
     City varchar(30), 
-    Telephone int(10), 
-    Mobile int(10)
+    Telephone varchar(10), 
+    Mobile varchar(10)
 );
 
 CREATE TABLE `categories` 
@@ -48,6 +50,9 @@ INSERT INTO `users` (Username, Password, FirstName, Surname, AddressLine1, Addre
     ('joecrotty', 'kj7899', 'Joseph', 'Crotty', 'Apt 5 Clyde Road', 'Donnybrook', 'Dublin', 8887889, 876654456),
     ('tommy100', '123456', 'tom', 'behan', '14 hyde road', 'dalkey', 'dublin', 9983747, 876738782);
 
+
+
+
 INSERT INTO `categories` (CategoryID, CategoryDescription) VALUES
     ('001', 'Health'),
     ('002', 'Business'),
@@ -73,8 +78,23 @@ INSERT INTO `books` (ISBN, BookTitle, Author, Edition, Year, CategoryID, Reserve
     ('9823-98487', 'Optimising your Business', 'Cleo Blair', 1, '2001', '002', 'N'),
     ('988745-234', 'Tara Road', 'Maeve Binchy', 4, '2002', '008', 'N'),
     ('993-004-00', 'My Life in Bits', 'John Smith', 1, '2001', '003', 'N'),
-    ('9987-0039882', 'Shooting History', 'Jon Snow', 1, '2003', '009', 'N');
+    ('9987-0039882', 'Shooting History', 'Jon Snow', 1, '2003', '009', 'N'),
+    ('9956-12735', 'Mental Health Advice', 'Mental John', 2, '2001', '006', 'N'),
+    ('993040-127', 'Dune', 'Frank Herbert', 4, '1969', '008', 'N'),
+    ('993240-127', 'Dune Messiah', 'Frank Herbert', 4, '1976', '008', 'N'),
+    ('993440-127', 'Children of Dune', 'Frank Herbert', 4, '1990', '008', 'N');
+
 
 INSERT INTO `reservations` (ISBN, Username, ReservedDate) VALUES
     ('98234-029384', 'joecrotty', '2008-10-11'),
     ('9823-98345', 'tommy100', '2008-10-11');
+    
+
+CREATE USER 'alanjmckenna'@'localhost' IDENTIFIED BY 't1234s';
+GRANT SELECT, INSERT, UPDATE ON librarydb.* TO 'alanjmckenna'@'localhost';
+
+CREATE USER 'joecrotty'@'localhost' IDENTIFIED BY 'kj7899';
+GRANT SELECT, INSERT, UPDATE ON librarydb.* TO 'joecrotty'@'localhost';
+
+CREATE USER 'tommy100'@'localhost' IDENTIFIED BY '123456';
+GRANT SELECT, INSERT, UPDATE ON librarydb.* TO 'tommy100'@'localhost';
